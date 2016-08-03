@@ -35,7 +35,7 @@ set_target_properties(${LIBRARY_NAME} PROPERTIES DEBUG_POSTFIX "d")
 
 # Configure compiler flags and definitions.
 if(MSVC)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DSQLITE_CORE")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DSQLITE_CORE")
 else()
     set_target_properties(${LIBRARY_NAME} PROPERTIES COMPILE_FLAGS "-DSQLITE_CORE")
 endif()
